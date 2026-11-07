@@ -1,0 +1,14 @@
+{
+  "id": "example-echo-scope",
+  "name": "Echo Scope (example)",
+  "version": "1.0.0",
+  "author": "Machinaut Studios",
+  "description": "A Mod Panel and the Code Mod it talks to. The panel shows the ship's sector, hull, shields and salvage on the players' devices, counts the enemies the Code Mod saw destroyed, and has a PING button that the Code Mod answers. The Code Mod runs with full access to the host's computer once approved, so read main.js before you approve it.",
+  "contributes": {
+    "text": "text",
+    "code": "main.js",
+    "panels": [
+      { "id": "scope", "titleKey": "mod.example-echo-scope.title", "file": "panels/scope.html", "on": ["terminal", "viewport"] }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "example-pirate-talk",
+  "name": "Pirate Talk (example)",
+  "version": "1.0.0",
+  "author": "Machinaut Studios",
+  "description": "A tiny Language Pack: the lobby and the ship's log speak like pirates. Everything it leaves out stays English.",
+  "contributes": {
+    "language": { "tag": "en", "dir": "language" }
+  }
+}

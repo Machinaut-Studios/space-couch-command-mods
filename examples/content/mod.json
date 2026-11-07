@@ -1,0 +1,11 @@
+{
+  "id": "example-ember",
+  "name": "The Ember Thread (example)",
+  "version": "1.0.0",
+  "author": "Machinaut Studios",
+  "description": "A Content Mod: a new hull (the Skiff), a new enemy (the Ironclad), a new anomaly (the Ember Core), a captain (Vex Ember) and a short two-stage quest, with English text and a German translation.",
+  "contributes": {
+    "text": "text",
+    "content": "content.json"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "mod": {
+    "example-ember": {
+      "vex": "Vex Ember",
+      "ironclad": "PANZERSCHIFF",
+      "core": {
+        "prefix": "SELTSAMER KÖRPER",
+        "label": "Glutkern",
+        "m1": "Der Planet glüht wie ein abgedecktes Feuer.",
+        "m2": "Ein Lichtfaden führt vom Kern zu einem Wrack.",
+        "clue": "Der Glutkern pulsiert und zeigt auf ein Wrack im nächsten Sektor.",
+        "ambush": "Etwas steigt aus dem Glühen auf: ein Panzerschiff."
+      },
+      "site": {
+        "prefix": "WRACK",
+        "label": "Glutfundstelle",
+        "m1": "Die Fundstelle summt im selben Ton wie der Kern.",
+        "done": "Der Glutfaden endet hier. Der Laderaum ist voll warmer Bergungsgüter."
+      },
+      "quest": {
+        "name": "DER GLUTFADEN",
+        "s1": "Folgt dem Faden zur Glutfundstelle.",
+        "j1": "Der Glutkern zeigte auf ein Wrack. Findet die Glutfundstelle im nächsten Sektor.",
+        "j2": "Der Glutfaden endete am Wrack. Er zahlte in Bergungsgut und Sonden."
+      },
+      "skiff": {
+        "label": "SKIFF",
+        "blurb": "Ein leichter, schneller Rumpf mit dem Aufbau eines Cutters.",
+        "subtitle": "SCHNELL UND DÜNN",
+        "tagline": "Schwer zu treffen, leicht zu verletzen."
+      }
+    }
+  }
+}

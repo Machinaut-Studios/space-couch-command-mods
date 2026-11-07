@@ -1,0 +1,40 @@
+{
+  "id": "example-reskin",
+  "name": "Neon Boing (example)",
+  "version": "1.0.0",
+  "author": "Machinaut Studios",
+  "description": "A Reskin: hot-pink and violet themes, a rubber boing on every button press, a fanfare on confirm, and a new face for the corsair captains. It changes how the game looks and sounds, never how it plays.",
+  "contributes": {
+    "reskin": {
+      "assets": {
+        "sfx/ui-press-1.m4a": "audio/boing.wav",
+        "sfx/ui-press-2.m4a": "audio/boing.wav",
+        "sfx/ui-confirm-1.m4a": "audio/fanfare.wav",
+        "avatars/12.png": "faces/captain.png",
+        "avatars/5.png": "faces/captain.png",
+        "avatars/4.png": "faces/captain.png",
+        "avatars/15.png": "faces/captain.png",
+        "avatars/13.png": "faces/captain.png",
+        "avatars/14.png": "faces/captain.png"
+      },
+      "palettes": {
+        "green": {
+          "bg0": "#0d0212", "bg1": "#16041e", "bg2": "#260a35", "line": "#5a1c7a",
+          "ink": "#ffb3f0", "inkDim": "#e060d0", "inkFaint": "#8a2a80",
+          "primary": "#ff3fd0", "primaryDeep": "#9c1c84", "glow": "#ff3fd0",
+          "science": "#7fe8ff"
+        },
+        "amber": {
+          "bg0": "#0a0214", "bg1": "#12041f", "bg2": "#1f0a38", "line": "#4a1c8a",
+          "ink": "#d9b8ff", "inkDim": "#a66cf0", "inkFaint": "#5e32a0",
+          "primary": "#8f3dff", "primaryDeep": "#5a1cb0", "glow": "#8f3dff"
+        },
+        "mixed": {
+          "bg0": "#020a14", "bg1": "#051524", "bg2": "#0a2540",
+          "primary": "#ffe14d", "primaryDeep": "#9c8a1c", "glow": "#ffe14d",
+          "ink": "#fff3b3", "inkDim": "#e0c43c"
+        }
+      }
+    }
+  }
+}

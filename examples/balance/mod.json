@@ -1,0 +1,8 @@
+{
+  "id": "example-glass-cannon",
+  "name": "Glass Cannon (example)",
+  "version": "1.0.0",
+  "author": "Machinaut Studios",
+  "description": "A Balance change: every beam hits three times as hard and recharges faster, and every hull is less than half as thick. One lucky hit ends the fight, for either side.",
+  "contributes": { "balance": "balance.json" }
+}

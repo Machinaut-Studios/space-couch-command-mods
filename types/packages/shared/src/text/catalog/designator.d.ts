@@ -1,0 +1,33 @@
+export declare const designator: {
+    readonly callsign: import("..").TextEntry<"{num} {word}">;
+    readonly callsignSuffix: import("..").TextEntry<"{num} {word}-{i}">;
+    readonly poi: import("..").TextEntry<"P-{n} {word}">;
+    readonly nato: {
+        readonly alpha: "Alpha";
+        readonly bravo: "Bravo";
+        readonly charlie: "Charlie";
+        readonly delta: "Delta";
+        readonly echo: "Echo";
+        readonly foxtrot: "Foxtrot";
+        readonly golf: "Golf";
+        readonly hotel: "Hotel";
+        readonly india: "India";
+        readonly juliett: "Juliett";
+        readonly kilo: "Kilo";
+        readonly lima: "Lima";
+        readonly mike: "Mike";
+        readonly november: "November";
+        readonly oscar: "Oscar";
+        readonly papa: "Papa";
+        readonly quebec: "Quebec";
+        readonly romeo: "Romeo";
+        readonly sierra: "Sierra";
+        readonly tango: "Tango";
+        readonly uniform: "Uniform";
+        readonly victor: "Victor";
+        readonly whiskey: "Whiskey";
+        readonly xray: "X-ray";
+        readonly yankee: "Yankee";
+        readonly zulu: "Zulu";
+    } & import("../types").TextGroup;
+} & import("../types").TextGroup;

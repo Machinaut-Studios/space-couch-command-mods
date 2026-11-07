@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@scc/shared": [
+        "./packages/shared/src/index"
+      ],
+      "@scc/shared/*": [
+        "./packages/shared/src/*"
+      ]
+    }
+  }
+}

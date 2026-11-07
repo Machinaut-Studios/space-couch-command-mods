@@ -1,0 +1,34 @@
+{
+  "_comment": "Keys starting with an underscore are notes; the game ignores them. Everything this file leaves out shows in English.",
+  "view": {
+    "lobby": {
+      "launch": {
+        "cta": "SET SAIL",
+        "waiting": "WAITING FOR SCALLYWAGS",
+        "crewed": {
+          "one": "{seated} OF {count} POST MANNED, ARR · {ready} READY",
+          "other": "{seated} OF {count} POSTS MANNED, ARR · {ready} READY"
+        },
+        "crewedShort": "{seated}/{core} MANNED · {ready} READY"
+      },
+      "join": {
+        "caption": "SCAN, YE SCALLYWAG",
+        "kickerRoomCode": "TREASURE CODE"
+      }
+    }
+  },
+  "station": {
+    "shell": {
+      "game": {
+        "shipLost": {
+          "title": "DAVY JONES",
+          "sub": "The bridge goes dark, matey."
+        }
+      }
+    }
+  },
+  "log": {
+    "hostilesCleared": "Scallywags cleared, standing down from red alert, arr",
+    "returnedToLobby": "Back in port, patch the hull and sail again"
+  }
+}

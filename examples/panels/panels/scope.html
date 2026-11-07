@@ -1,0 +1,56 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  /* The game's palette arrives in scc.state.theme.colors; the script copies it into these variables. */
+  :root { --bg0: #010d06; --bg2: #0a2616; --line: #16512e; --ink: #8effb1; --inkDim: #41d27e; --primary: #2bff88; --danger: #ff5a4d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 12px; background: var(--bg0); color: var(--ink); font: 14px/1.4 ui-monospace, Menlo, Consolas, monospace; }
+  h1 { margin: 0 0 8px; font-size: 13px; letter-spacing: .2em; color: var(--inkDim); }
+  .row { display: flex; justify-content: space-between; margin: 6px 0 2px; color: var(--inkDim); }
+  .row b { color: var(--ink); font-weight: normal; }
+  .bar { height: 12px; background: var(--bg2); border: 1px solid var(--line); }
+  .bar > i { display: block; height: 100%; width: 0; background: var(--primary); transition: width .25s; }
+  .bar.low > i { background: var(--danger); }
+  .arcs { display: flex; gap: 4px; margin-top: 4px; }
+  .arcs .bar { flex: 1; }
+  .kills { margin: 14px 0 8px; font-size: 40px; text-align: center; color: var(--primary); text-shadow: 0 0 12px var(--primary); }
+  .kills small { display: block; font-size: 11px; letter-spacing: .2em; color: var(--inkDim); text-shadow: none; }
+  button { width: 100%; padding: 10px; font: inherit; letter-spacing: .2em; color: var(--bg0); background: var(--primary); border: 0; cursor: pointer; }
+  #answer { margin-top: 8px; min-height: 2.8em; color: var(--inkDim); }
+</style>
+<h1>ECHO SCOPE</h1>
+<div class="row">SECTOR <b id="sector">-</b></div>
+<div class="row">HULL <b id="hullNum">-</b></div>
+<div class="bar" id="hull"><i></i></div>
+<div class="row">SHIELDS</div>
+<div class="arcs" id="arcs"></div>
+<div class="row">SALVAGE <b id="salvage">-</b></div>
+<div class="kills"><span id="kills">0</span><small>ENEMIES DESTROYED</small></div>
+<button id="ping">PING THE CODE MOD</button>
+<div id="answer">waiting for the first ping</div>
+<script>
+  var $ = function (id) { return document.getElementById(id); };
+
+  // The state arrives about four times a second, and once when the page is ready.
+  scc.on("state", function (s) {
+    for (var name in s.theme.colors) document.documentElement.style.setProperty("--" + name, s.theme.colors[name]);
+    $("sector").textContent = s.sector;
+    $("hullNum").textContent = Math.round(s.hull) + "%";
+    $("hull").firstChild.style.width = s.hull + "%";
+    $("hull").className = "bar" + (s.hull < 30 ? " low" : "");
+    var arcs = Object.values(s.shields || {});
+    $("arcs").innerHTML = arcs.map(function () { return '<div class="bar"><i></i></div>'; }).join("");
+    arcs.forEach(function (v, i) { $("arcs").children[i].firstChild.style.width = Math.min(v, 100) + "%"; });
+    $("salvage").textContent = s.salvage;
+  });
+
+  // Whatever the Code Mod sends with game.send() arrives here.
+  scc.on("message", function (m) {
+    if (typeof m.kills === "number") $("kills").textContent = m.kills;
+    if (typeof m.pong === "number") $("answer").textContent = "Code Mod answered " + m.who + " in " + (Date.now() - m.pong) + " ms.";
+  });
+
+  $("ping").onclick = function () {
+    scc.send({ ping: Date.now() });
+  };
+</script>

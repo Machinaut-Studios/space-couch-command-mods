@@ -1,0 +1,15 @@
+{
+  "combat": {
+    "weaponDamage": 72,
+    "chargeTimeSec": 1.6,
+    "maxWeaponRange": 900
+  },
+  "shipClasses": {
+    "wren": { "maxHull": 25 },
+    "cutter": { "maxHull": 32 },
+    "corvette": { "maxHull": 40 },
+    "frigate": { "maxHull": 45 },
+    "cruiser": { "maxHull": 55 },
+    "dreadnought": { "maxHull": 70 }
+  }
+}

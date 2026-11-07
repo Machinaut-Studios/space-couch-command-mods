@@ -1,0 +1,18 @@
+{
+  "name": "space-couch-command-mods",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Example Mods for Space Couch Command. Only needed to type-check the Code Mod examples; the Mods themselves need no build.",
+  "scripts": {
+    "typecheck": "tsc -p examples/code/jsconfig.json && tsc -p examples/panels/jsconfig.json",
+    "assets": "node tools/make-assets.mjs"
+  },
+  "devDependencies": {
+    "@colyseus/core": "^0.16.24",
+    "@colyseus/schema": "^3.0.0",
+    "@types/node": "^20.19.0",
+    "colyseus": "^0.16.5",
+    "typescript": "^5.9.3"
+  }
+}

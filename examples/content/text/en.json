@@ -1,0 +1,34 @@
+{
+  "mod": {
+    "example-ember": {
+      "vex": "Vex Ember",
+      "ironclad": "IRONCLAD",
+      "core": {
+        "prefix": "ODD BODY",
+        "label": "Ember Core",
+        "m1": "The planet glows like a banked fire.",
+        "m2": "A thread of light runs from the core toward a wreck.",
+        "clue": "The Ember Core pulses and points at a wreck in the next sector.",
+        "ambush": "Something rises out of the glow: an Ironclad."
+      },
+      "site": {
+        "prefix": "WRECK",
+        "label": "Ember Site",
+        "m1": "The site hums at the same note as the core.",
+        "done": "The Ember Thread ends here. The hold is full of warm salvage."
+      },
+      "quest": {
+        "name": "THE EMBER THREAD",
+        "s1": "Follow the thread to the Ember Site.",
+        "j1": "The Ember Core pointed at a wreck. Find the Ember Site in the next sector.",
+        "j2": "The Ember Thread ended at the wreck. It paid in salvage and probes."
+      },
+      "skiff": {
+        "label": "SKIFF",
+        "blurb": "A light, quick hull with the layout of a Cutter.",
+        "subtitle": "FAST AND THIN",
+        "tagline": "Hard to hit, easy to hurt."
+      }
+    }
+  }
+}

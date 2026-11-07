@@ -1,0 +1,8 @@
+{
+  "id": "example-victory-lap",
+  "name": "Victory Lap (example)",
+  "version": "1.0.0",
+  "author": "Machinaut Studios",
+  "description": "A Code Mod. Beams hit 50% harder, every enemy you destroy pays 10 salvage, and the ship's log keeps a tally that survives saving and continuing. This is a program: it runs with full access to the host's computer once approved, so read main.js before you approve it.",
+  "contributes": { "code": "main.js" }
+}

@@ -1,0 +1,65 @@
+{
+  "personas": [
+    { "faction": "corsairs", "speakerKey": "mod.example-ember.vex", "avatar": "faces/vex.png" }
+  ],
+  "anomalies": [
+    {
+      "id": "ember_core",
+      "prefixKey": "mod.example-ember.core.prefix",
+      "labelKey": "mod.example-ember.core.label",
+      "kind": "planet",
+      "poolWeight": 50,
+      "milestones": [
+        { "at": 0.5, "textKey": "mod.example-ember.core.m1" },
+        { "at": 1, "textKey": "mod.example-ember.core.m2" }
+      ],
+      "outcomes": [
+        { "kind": "questClue", "questId": "ember_thread", "toStage": 1, "weight": 3, "logKey": "mod.example-ember.core.clue" },
+        { "kind": "ambush", "classes": ["ironclad"], "weight": 1, "logKey": "mod.example-ember.core.ambush" }
+      ]
+    },
+    {
+      "id": "ember_site",
+      "prefixKey": "mod.example-ember.site.prefix",
+      "labelKey": "mod.example-ember.site.label",
+      "kind": "wreck",
+      "poolWeight": 0,
+      "milestones": [{ "at": 1, "textKey": "mod.example-ember.site.m1" }],
+      "outcomes": [
+        { "kind": "questClue", "questId": "ember_thread", "toStage": 2, "weight": 1, "logKey": "mod.example-ember.site.done" }
+      ]
+    }
+  ],
+  "quests": [
+    {
+      "id": "ember_thread",
+      "nameKey": "mod.example-ember.quest.name",
+      "stages": [
+        { "stage": 1, "logKey": "mod.example-ember.quest.s1", "journalKey": "mod.example-ember.quest.j1", "forceAnomalyId": "ember_site" },
+        { "stage": 2, "logKey": "", "journalKey": "mod.example-ember.quest.j2", "salvage": 50, "probes": 2 }
+      ]
+    }
+  ],
+  "enemies": [
+    {
+      "id": "ironclad",
+      "labelKey": "mod.example-ember.ironclad",
+      "basedOn": "reaver",
+      "visual": "basilisk",
+      "stats": { "maxHull": 200 },
+      "pool": { "weight": 6, "minSector": 1 }
+    }
+  ],
+  "hulls": [
+    {
+      "id": "skiff",
+      "labelKey": "mod.example-ember.skiff.label",
+      "blurbKey": "mod.example-ember.skiff.blurb",
+      "subtitleKey": "mod.example-ember.skiff.subtitle",
+      "taglineKey": "mod.example-ember.skiff.tagline",
+      "seatsFrom": "cutter",
+      "statsFrom": "wren",
+      "stats": { "maxHull": 80, "speedMul": 1.6 }
+    }
+  ]
+}
